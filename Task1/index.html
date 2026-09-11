@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Flow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Study Flow</h1>
+            <p id="date"></p>
+        </div>
+        <button id="themeBtn">Light Mode 🌙</button>
+    </header>
+    <main>
+        <h2>Dashboard</h2>
+        <div class="stats">
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <p id="total">0</p>
+            </div>
+            <div class ="card">
+                <h3>Completed</h3>
+                <p id="completed">0</p>
+            </div>
+            <div class ="card">
+                <h3>Pending</h3>
+                <p id="pending">0</p>
+            </div>
+            <div class ="card">
+                <h3>Progress</h3>
+                <p id="percentage">0%</p>
+            </div>
+        </div>
+        <div class="progress-section">
+            <h3>Progress Bar</h3>
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+        </div>
+         <section class="form-section">
+            <h2 id="formTitle">Add Task</h2>
+            <form id="taskForm">
+                <input type="text" id="taskName" placeholder="Task name">
+                <input type="text" id="subject" placeholder="Subject">
+                <select id="priority">
+                    <option value="">Select Priority</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+
+                <input type="date" id="dueDate">
+
+                <button type="submit" id="submitBtn">Add Task</button>
+
+                <p id="error"></p>
+
+            </form>
+
+        </section>
+
+        <section class="tasks-section">
+
+            <div class="controls">
+
+                <input type="text" id="search" placeholder="Search tasks...">
+
+                <select id="filter">
+                    <option value="all">All Tasks</option>
+                    <option value="completed">Completed</option>
+                    <option value="pending">Pending</option>
+                </select>
+
+                <select id="priorityFilter">
+                    <option value="all">All Priorities</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+
+                <select id="sort">
+                    <option value="default">Sort By</option>
+                    <option value="name">Name</option>
+                    <option value="date">Due Date</option>
+                    <option value="priority">Priority</option>
+                </select>
+
+            </div>
+
+            <div id="taskList"></div>
+
+            <p id="empty">No tasks found.</p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

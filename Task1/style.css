@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    transition: 0.3s;
+}
+header {
+    background: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+header h1 {
+    color: #2878d4;
+    font-size: 30px;
+}
+#date {
+    color: #777;
+    margin-top: 5px;
+}
+#themeBtn {
+    border: none;
+    background: #eef4fb;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+main {
+    width: 85%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+main > h2 {
+    margin-bottom: 20px;
+}
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px #ddd;
+}
+.card h3 {
+    font-size: 16px;
+    color: #666;
+}
+.card p {
+    font-size: 28px;
+    margin-top: 10px;
+    color: #2878d4;
+    font-weight: bold;
+}
+.progress-section {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.progress-section h3 {
+    margin-bottom: 10px;
+}
+.progress {
+    width: 100%;
+    height: 15px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: #2878d4;
+    transition: 0.3s;
+}
+.form-section,
+.tasks-section {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.form-section h2 {
+    margin-bottom: 15px;
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+input,
+select,
+button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+form button {
+    background: #2878d4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    grid-column: 1 / 3;
+    width: 150px;
+    justify-self: center;
+}
+#error {
+    color: red;
+    grid-column: 1 / 3;
+}
+.controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.task {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.task h3 {
+    margin-bottom: 8px;
+}
+.task p {
+    color: #666;
+    margin: 4px 0;
+}
+.task button {
+    margin-top: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.complete-btn {
+    background: #2878d4;
+    color: white;
+    border: none;
+}
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+}
+.edit-btn {
+    background: #eee;
+}
+.completed {
+    opacity: 0.6;
+}
+.completed h3 {
+    text-decoration: line-through;
+}
+#empty {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+}
+body.dark {
+    background: #181a1b;
+    color: #eee;
+}
+
+body.dark header,
+body.dark .card,
+body.dark .progress-section,
+body.dark .form-section,
+body.dark .tasks-section {
+    background: #242628;
+    color: #eee;
+}
+body.dark #date,
+body.dark .card h3,
+body.dark .task p {
+    color: #aaa;
+}
+
+body.dark .task {
+    border-color: #444;
+}
+
+body.dark input,
+body.dark select {
+    background: #333;
+    color: white;
+    border-color: #555;
+}
+
+body.dark #themeBtn {
+    background: #333;
+    color: white;
+}
+
+body.dark .edit-btn {
+    background: #444;
+    color: white;
+}
+@media (max-width: 700px) {
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    form,
+    .controls {
+        grid-template-columns: 1fr;
+    }
+
+    form button,
+    #error {
+        grid-column: auto;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    main {
+        width: 92%;
+    }
+}
